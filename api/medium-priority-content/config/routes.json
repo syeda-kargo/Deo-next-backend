@@ -1,0 +1,28 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/medium-priority-content",
+      "handler": "medium-priority-content.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/medium-priority-content",
+      "handler": "medium-priority-content.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/medium-priority-content",
+      "handler": "medium-priority-content.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

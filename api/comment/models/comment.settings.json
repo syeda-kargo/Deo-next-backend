@@ -1,0 +1,42 @@
+{
+  "kind": "collectionType",
+  "collectionName": "comments",
+  "info": {
+    "name": "comment",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "author": {
+      "plugin": "users-permissions",
+      "model": "user"
+    },
+    "author_email": {
+      "type": "email"
+    },
+    "author_ip": {
+      "type": "string"
+    },
+    "author_name": {
+      "type": "string"
+    },
+    "content": {
+      "type": "string"
+    },
+    "date": {
+      "type": "datetime"
+    },
+    "wordpress_id": {
+      "type": "integer"
+    },
+    "posts": {
+      "collection": "post",
+      "via": "comments",
+      "dominant": true
+    }
+  }
+}

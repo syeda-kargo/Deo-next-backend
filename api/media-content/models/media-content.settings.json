@@ -1,0 +1,80 @@
+{
+  "kind": "collectionType",
+  "collectionName": "media_contents",
+  "info": {
+    "name": "media-content",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "date": {
+      "type": "datetime"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title"
+    },
+    "wordpress_id": {
+      "type": "integer"
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": [
+        "publish",
+        "future",
+        "draft",
+        "pending",
+        "private",
+        "inherit"
+      ]
+    },
+    "comment_status": {
+      "type": "enumeration",
+      "enum": [
+        "open",
+        "closed"
+      ]
+    },
+    "ping_status": {
+      "type": "enumeration",
+      "enum": [
+        "open",
+        "closed"
+      ]
+    },
+    "alt_text": {
+      "type": "string"
+    },
+    "caption": {
+      "type": "string"
+    },
+    "media_type": {
+      "type": "enumeration",
+      "enum": [
+        "image",
+        "video",
+        "text",
+        "application",
+        "audio",
+        "file"
+      ]
+    },
+    "mime_type": {
+      "type": "string"
+    },
+    "author": {
+      "plugin": "users-permissions",
+      "model": "role"
+    },
+    "post": {
+      "model": "post"
+    }
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "kind": "singleType",
+  "collectionName": "high_priority_contents",
+  "info": {
+    "name": "high-priority-content",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "media_contents": {
+      "collection": "media-content"
+    },
+    "posts": {
+      "collection": "post"
+    }
+  }
+}

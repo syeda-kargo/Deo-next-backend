@@ -1,0 +1,28 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/high-priority-content",
+      "handler": "high-priority-content.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/high-priority-content",
+      "handler": "high-priority-content.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/high-priority-content",
+      "handler": "high-priority-content.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

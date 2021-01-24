@@ -1,0 +1,20 @@
+{
+  "kind": "singleType",
+  "collectionName": "medium_priority_contents",
+  "info": {
+    "name": "medium-priority-content"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "media_contents": {
+      "collection": "media-content"
+    },
+    "posts": {
+      "collection": "post"
+    }
+  }
+}

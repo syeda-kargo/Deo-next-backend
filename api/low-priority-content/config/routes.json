@@ -1,0 +1,28 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/low-priority-content",
+      "handler": "low-priority-content.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/low-priority-content",
+      "handler": "low-priority-content.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/low-priority-content",
+      "handler": "low-priority-content.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

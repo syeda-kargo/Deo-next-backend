@@ -1,0 +1,106 @@
+{
+  "kind": "collectionType",
+  "collectionName": "posts",
+  "info": {
+    "name": "post",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "content": {
+      "type": "richtext"
+    },
+    "date": {
+      "type": "datetime"
+    },
+    "modified": {
+      "type": "boolean"
+    },
+    "modified_date": {
+      "type": "datetime"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title"
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": [
+        "publish",
+        "future",
+        "draft",
+        "pending",
+        "private"
+      ]
+    },
+    "author": {
+      "plugin": "users-permissions",
+      "model": "user"
+    },
+    "excerpt": {
+      "type": "richtext"
+    },
+    "comment_status": {
+      "type": "enumeration",
+      "enum": [
+        "open",
+        "closed"
+      ]
+    },
+    "ping_status": {
+      "type": "enumeration",
+      "enum": [
+        "open",
+        "closed"
+      ]
+    },
+    "formats": {
+      "type": "enumeration",
+      "enum": [
+        "standard",
+        "aside",
+        "chat",
+        "gallery",
+        "link",
+        "image",
+        "quote",
+        "status",
+        "video",
+        "audio"
+      ]
+    },
+    "categories": {
+      "collection": "category",
+      "via": "posts",
+      "dominant": true
+    },
+    "wordpress_id": {
+      "type": "integer"
+    },
+    "media_content": {
+      "model": "media-content"
+    },
+    "featured_media_wordpress_id": {
+      "type": "integer"
+    },
+    "comment": {
+      "model": "comment"
+    },
+    "tags": {
+      "collection": "tag",
+      "via": "posts",
+      "dominant": true
+    },
+    "comments": {
+      "via": "posts",
+      "collection": "comment"
+    }
+  }
+}
